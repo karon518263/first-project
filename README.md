@@ -80,8 +80,6 @@ plt.grid(True)
 plt.show()
 <img width="1611" height="811" alt="Taiwan's vehecle sales time series trend (2014-2025)" src="https://github.com/user-attachments/assets/6074901f-aa57-4bba-8f05-f1a7f030afb3" />
 
-df_total_new.hist(figsize=(10,10), color='skyblue')
-plt.show()
 
 sns.heatmap(df_total_new.corr(numeric_only=True), annot=True, square=False, cmap='Blues')
 <img width="727" height="619" alt="熱力圖" src="https://github.com/user-attachments/assets/727e3526-82fb-47c5-9cdd-fd09f6224405" />
