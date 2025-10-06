@@ -87,5 +87,9 @@ plt.show()
 sns.heatmap(df_total_new.corr(numeric_only=True), annot=True, square=False, cmap='Blues')
 <img width="727" height="619" alt="熱力圖" src="https://github.com/user-attachments/assets/727e3526-82fb-47c5-9cdd-fd09f6224405" />
 
+* 由此熱力圖發現
+* 經濟成長與進口車呈現高度正相關，與國產車銷量呈中度負相關，與總體汽車銷量呈現低度正相關，表示經濟成長時，人民的收入增加需求會由國產車偏向進口車
+* 國產車與進口車存在競爭關係
+
 ```
 
