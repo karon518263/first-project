@@ -48,7 +48,8 @@ df_rename.isna().sum()
 #視覺化處理缺失值
 import missingno as msno
 msno.matrix(df_rename)
-!<img width="2027" height="1067" alt="視覺化缺失值" src="https://github.com/user-attachments/assets/3afe6a33-ab79-43c0-a2fc-15b3eccac1e2" />
+<img width="2027" height="1067" alt="視覺化缺失值" src="https://github.com/user-attachments/assets/a2145ea6-7032-48ad-8ef1-b95359aa1536" />
+
 
 
 
