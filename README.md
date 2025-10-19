@@ -99,6 +99,7 @@ plt.ylabel('Quarterly sales (units)', fontsize=12)
 plt.legend(fontsize=12)
 plt.grid(True)
 plt.show()
+<img width="1611" height="811" alt="台灣總體汽車銷售趨勢圖" src="https://github.com/user-attachments/assets/accdcb85-e264-457f-8226-ba0e54170ac1" />
 
 * 總體車輛銷售數量存在明顯的週期性及有明顯的正相關，數據通常都是同時上升或下降，，不過可以看出進口車銷售數量持續上升，國產車則是持續下降
 
@@ -122,6 +123,7 @@ plt.title("Taiwan's vehecle sales time series trend (2014-2025) VS Income_Per_Ca
 fig.tight_layout() 
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.show()
+<img width="1790" height="790" alt="台灣汽車銷售趨勢與人均收入趨勢圖" src="https://github.com/user-attachments/assets/8eee3815-94f3-4d62-b287-6b0ff78fa8ee" />
 
 * 人均收入與進口車銷售數量有正相關，與國產車銷售數量呈負相關
 * 代表收入提升時，台灣人民會更傾向於購買進口車
@@ -147,6 +149,8 @@ fig.tight_layout()
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.show()
 
+<img width="1790" height="790" alt="台灣汽車銷售趨勢與經濟成長率趨勢圖" src="https://github.com/user-attachments/assets/281dadf7-4840-4043-86cf-be12733e43d6" />
+
 fig, ax1 = plt.subplots(figsize=(18, 8), layout='constrained')
 
 ax1.plot(df_total_new.index.to_timestamp(), df_total_new['Domestic_sales'], color='royalblue', label='Domestic_sales')
@@ -168,6 +172,8 @@ plt.title("Taiwan's vehecle sales time series trend (2014-2025) VS Economic_Grow
 fig.tight_layout() 
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.show()
+
+<img width="1790" height="790" alt="台灣總體汽車銷售趨勢與經濟成長率趨勢圖" src="https://github.com/user-attachments/assets/82d7011d-71ed-4604-b8ab-7bc78d911b04" />
 
 * 經濟成長率與整體汽車銷售及進口車銷售數量有高度正相關，與國產車銷售數量則是低度相關。
 * 2023年，台灣整體車市銷量顯著上升，經濟成長率卻大幅下滑。此現象的原因在於，車市受惠於疫後供應鏈回穩，先前因晶片短缺的訂單得以交付，帶動銷量激增；然而，整體經濟卻因全球需求普遍疲軟，導致台灣出口大幅減少，成長動能因而受挫。
@@ -192,6 +198,8 @@ plt.title("Taiwan's vehecle sales time series trend (2014-2025) VS Exchange_Rate
 fig.tight_layout() 
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.show()
+
+<img width="1790" height="790" alt="台灣汽車銷售趨勢與匯率趨勢圖" src="https://github.com/user-attachments/assets/9fc568fe-a081-4fca-be36-8ce5e696af88" />
 
 * 匯率與進口車銷售數量有低度相關，並沒有顯著的關聯；與國產車銷售數量則無相關
 
