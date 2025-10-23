@@ -66,6 +66,10 @@ df_total_new.set_index('Statistical_Period', inplace=True)
 
 print(df_total_new.index)
 
+df_total_new['quarter'] = df_total_new.index.quarter
+
+df_total_new['quarter_str'] = 'Q' + df_total_new['quarter'].astype(str)
+
 df_total_new.head()
 
 df_total_new.info()
@@ -89,6 +93,30 @@ sns.heatmap(df_total_new.corr(numeric_only=True), annot=True, square=False, cmap
 
 df_total_new.info()
 
+#計算個季度的銷售數量平均數
+quarterly_avg_sales = df_total_new.groupby('quarter_str')[['Domestic_sales', 'Imported_sales', 'Total_Sales']].mean()
+
+quarterly_avg_sales = quarterly_avg_sales.round(0)
+
+print("\n--- 各季度平均銷量統計 ---")
+print(quarterly_avg_sales)
+
+plt.figure(figsize=(12, 8), layout='constrained')
+sns.boxplot(
+    x='quarter_str', 
+    y='Total_Sales', 
+    data=df_total_new,
+    palette='viridis' 
+)
+
+plt.title('Box Plot of Total Sales Distribution by Quarter', fontsize=20)
+plt.xlabel('quarter_str', fontsize=14)
+plt.ylabel('Total_Sales', fontsize=14)
+plt.show()
+<img width="1211" height="811" alt="箱型圖-車輛銷售數量季度" src="https://github.com/user-attachments/assets/d9366416-0180-4d12-93a3-0e4131fbd7cd" />
+
+*可以觀察出Q1及Q4是車市的旺季，Q2則是相對不穩定，Q3是淡季
+
 fig, ax = plt.subplots(figsize=(16, 8), layout='constrained')
 plt.plot(df_total_new.index.to_timestamp(), df_total_new['Domestic_sales'], color='royalblue',  label='Domestic_sales')
 plt.plot(df_total_new.index.to_timestamp(), df_total_new['Imported_sales'], color='darkorange',  label='Imported_sales')
@@ -101,8 +129,8 @@ plt.grid(True)
 plt.show()
 <img width="1611" height="811" alt="台灣總體汽車銷售趨勢圖" src="https://github.com/user-attachments/assets/accdcb85-e264-457f-8226-ba0e54170ac1" />
 
-* 總體車輛銷售數量存在明顯的週期性及有明顯的正相關，數據通常都是同時上升或下降，，不過可以看出進口車銷售數量持續上升，國產車則是持續下降，在2017呈現交叉，且差距有越來越大的趨勢
-* 依圖表顯示，總體汽車銷量的起伏大致都在年前獲年後大約在Q1及Q4的位置會達到高峰，與名俗上過年前後會有買氣大致相符
+*總體車輛銷售數量存在明顯的週期性及有明顯的正相關，數據通常都是同時上升或下降，，不過可以看出進口車銷售數量持續上升，國產車則是持續下降，在2017呈現交叉，且差距有越來越大的趨勢
+*依圖表顯示，國產車及進口車的起伏大致都在年前獲年後大約在Q1及Q4的位置會達到高峰，與季度及汽車銷售數量箱型圖一致
 
 fig, ax1 = plt.subplots(figsize=(18, 8), layout='constrained')
 
