@@ -114,6 +114,8 @@ plt.xlabel('quarter_str', fontsize=14)
 plt.ylabel('Total_Sales', fontsize=14)
 plt.show()
 
+<img width="1211" height="811" alt="箱型圖-車輛銷售數量季度" src="https://github.com/user-attachments/assets/7f27d9b6-d968-44fb-8c58-895afc9eee2b" />
+
 * 可以觀察出Q1及Q4是車市的旺季，Q2則是相對不穩定，Q3是淡季
 
 #進口車、國產車及總體汽車銷量的時間序列圖
@@ -127,6 +129,8 @@ plt.ylabel('Quarterly sales (units)', fontsize=16)
 plt.legend(fontsize=12)
 plt.grid(True)
 plt.show()
+
+<img width="1611" height="811" alt="台灣總體汽車銷售趨勢圖" src="https://github.com/user-attachments/assets/8056f19c-3010-4259-9d67-82f5b66b52a7" />
 
 * 總體車輛銷售數量存在明顯的週期性及有明顯的正相關，數據通常都是同時上升或下降，，不過可以看出進口車銷售數量持續上升，國產車則是持續下降，在2017呈現交叉，且差距有越來越大的趨勢
 * 依圖表顯示，國產車及進口車的起伏大致都在年前獲年後大約在Q1及Q4的位置會達到高峰，與季度及汽車銷售數量箱型圖一致
@@ -153,6 +157,8 @@ fig.tight_layout()
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.show()
 
+<img width="1790" height="790" alt="台灣汽車銷售趨勢與人均收入趨勢圖" src="https://github.com/user-attachments/assets/28699952-6377-4e7a-bd95-76a5456f93e9" />
+
 * 人均收入與進口車銷售數量有正相關，與國產車銷售數量呈負相關
 * 代表收入提升時，台灣人民會更傾向於購買進口車
 
@@ -177,6 +183,8 @@ plt.title("Taiwan's vehecle sales time series trend (2014-2025) VS Economic_Grow
 fig.tight_layout()
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.show()
+
+<img width="1790" height="790" alt="台灣汽車銷售趨勢與經濟成長率趨勢圖" src="https://github.com/user-attachments/assets/e4a20b68-ceec-49c7-8dfd-a4e08ca67696" />
 
 ##進口車、國產車、總體汽車銷售及經濟成長率的時間序列圖
 fig, ax1 = plt.subplots(figsize=(18, 8), layout='constrained')
@@ -204,6 +212,8 @@ plt.show()
 * 經濟成長率與整體汽車銷售及進口車銷售數量有高度正相關，與國產車銷售數量則是低度相關。
 * 2023年，台灣整體車市銷量顯著上升，經濟成長率卻大幅下滑。此現象的原因在於，車市受惠於疫後供應鏈回穩，先前因晶片短缺的訂單得以交付，帶動銷量激增；然而，整體經濟卻因全球需求普遍疲軟，導致台灣出口大幅減少，成長動能因而受挫。
 
+<img width="1790" height="790" alt="台灣總體汽車銷售趨勢與經濟成長率趨勢圖" src="https://github.com/user-attachments/assets/6543ec28-bafc-4d2c-96a7-00f505646cb2" />
+
 #進口車、國產車及匯率的時間序列圖
 
 fig, ax1 = plt.subplots(figsize=(18, 8), layout='constrained')
@@ -226,6 +236,8 @@ plt.title("Taiwan's vehecle sales time series trend (2014-2025) VS Exchange_Rate
 fig.tight_layout()
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.show()
+
+<img width="1211" height="811" alt="箱型圖-車輛銷售數量季度" src="https://github.com/user-attachments/assets/f70d70ea-78cf-4c88-8b37-86125c04c61e" />
 
 * 匯率與進口車銷售數量有低度相關，並沒有顯著的關聯；與國產車銷售數量則無相關
 
