@@ -403,6 +403,8 @@ avg_sales_forecast = (arima_pred + lgbmr_pred + fbp_pred_series) / 3
 
 avg_gap_series = (arima_gap + fbp_gap_series + lgbm_gap) / 3
 
+avg_gap_total_mean = avg_gap_series.mean()
+
 final_summary_df = pd.DataFrame({
     '實際銷量': y_test,
     'ARIMA預測': arima_pred,
@@ -424,8 +426,7 @@ print(f'''本研究整合了 ARIMA、Prophet 及 LightGBM 三種模型的預測�
 在對等關稅後，市場實際銷售量皆低於預期的水準，根據三個模型的預測值，可以發現2025Q2的對等關稅確實對車市造成明顯的負面衝擊，
 消費者預期政府對因應美國的關稅壓力下調降對美進口的車輛進口貨物稅，預期車輛售價會下降，短期關稅戰未明朗前會呈現觀望的態度，
 所以即使台幣升值且人均所得及經濟成長率都呈現大幅成長的情況下,總體車輛銷售額卻是呈現下滑趨勢，
-依造三模型的平均預估值可以得知，市場總銷售量每季減少{abs(int(avg_gap_value))} 輛。''')
+依造三模型的平均預估值可以得知，市場總銷售量每季減少{abs(int(avg_gap_total_mean))} 輛。''')
 print('='*60)
-
 ```
 
